@@ -1,0 +1,264 @@
+/*General styles*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: helvetica;
+}
+
+span {
+  font-size: 24px;
+  font-family: monospace;
+  color: green;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 2px solid silver;
+  padding: 5px 0;
+}
+
+thead tr {
+  color: silver;
+  text-align: left;
+}
+
+body {
+  background-color: black;
+  padding: 10px 10px 40px;
+}
+
+body > * {
+  outline: 1px solid blue;
+}
+
+header {
+  padding: 20px;
+}
+
+header h1,
+header p {
+  text-align: center;
+  color: white;
+}
+
+header h1 {
+  font-family: monospace;
+  color: white;
+}
+
+header p {
+  font-style: italic;
+}
+
+.container {
+  background-color: white;
+  width: 1100px;
+  max-width: 90vw;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+/*INPUT SECTION*/
+
+.container > section {
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: rgb(2, 2, 77);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 2px solid silver;
+}
+
+.add-icon {
+  width: 33px;
+  height: 33px;
+  padding: 7px;
+  background-color: silver;
+  border-radius: 50%;
+}
+
+.add-icon:hover svg {
+  cursor: pointer;
+  transform: scale(1.5);
+}
+
+.cancel {
+  color: red;
+  width: 25px;
+}
+
+.cancel:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.icons .add-icon {
+  background-color: red;
+  width: 20px;
+  height: 20px;
+}
+
+.main-heading {
+  color: white;
+  padding: 10px 0;
+}
+
+.course {
+  width: 100px;
+  max-width: 100%;
+  font-size: 17px;
+}
+
+.course:focus {
+  outline: none;
+}
+
+input,
+select {
+  padding: 2px;
+  border: 0;
+  border-radius: 3px;
+  box-shadow: 2px 2px 3px silver;
+  height: 30px;
+  min-width: 100%;
+}
+
+table {
+  border-spacing: 2px;
+  width: 100%;
+  padding: 10px;
+}
+
+td,
+th {
+  padding: 6px 10px;
+  text-align: center;
+}
+
+/* tbody tr:hover {
+  background-color: rgb(75, 246, 189);
+  cursor: pointer;
+  border-radius: 50px;
+} */
+
+.outputs {
+  padding-bottom: 20px;
+}
+.gpa {
+  margin: 20px 0 30px;
+}
+
+.sub-heading {
+  color: black;
+  padding: 10px 0;
+  font-style: oblique;
+}
+
+.heading {
+  text-align: center;
+  padding-top: 10px;
+}
+
+button {
+  all: unset;
+  padding: 7px 10px;
+  background-color: black;
+  width: fit-content;
+  font-size: 14px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border-radius: 7px;
+  margin-bottom: 10px;
+}
+
+.add-semester:hover {
+  color: black;
+  cursor: pointer;
+  background-color: white;
+  outline: 2px solid black;
+}
+
+.report {
+  font-style: italic;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 0 0 0;
+  color: white;
+}
+
+.instruction {
+  list-style: lower-alpha;
+  padding: 40px 20px;
+}
+.instruction li {
+  font-size: small;
+
+  list-style: lower-alpha;
+  display: block;
+  border-bottom: 0;
+  padding: 5px 0;
+}
+
+@media screen and (max-width: 800px) {
+  table {
+    padding: 0;
+    border-spacing: 5px;
+  }
+
+  .container {
+    padding: 12px;
+  }
+  td {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .instruction li {
+    font-size: medium;
+  }
+
+  .inputs {
+    grid-column: span 2;
+  }
+
+  .outputs {
+    grid-column: span 2;
+    height: fit-content;
+  }
+}
